@@ -1,0 +1,11 @@
+SELECT
+	*
+FROM
+	users;
+
+SELECT
+	name,
+	SUBSTRING(name, 0, POSITION(' ' IN name)) AS first_name,
+	SUBSTRING(name, POSITION(' ' IN name) + 1, LENGTH(name)) AS last_name
+FROM
+	users;
